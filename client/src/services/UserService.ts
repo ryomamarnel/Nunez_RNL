@@ -22,5 +22,12 @@ const UserService = {
         throw error;
       });
   },
+  destroyUser: async (userId: number) => {
+    return AxiosInstance.put(`/destroyUser/${userId}`)
+      .then((response) => response)
+      .catch((error) => {
+        throw error;
+      });
+  },
 };
 export default UserService;
