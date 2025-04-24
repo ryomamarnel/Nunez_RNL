@@ -85,7 +85,10 @@ const LoginForm = () => {
         isVisible={isVisible}
         onClose={handleCloseAlertMessage}
       />
-      <form onSubmit={handleLogin}>
+      <form
+        className="bg-secondary-subtle p-4 rounded-3 shadow-sm"
+        onSubmit={handleLogin}
+      >
         <div className="mb-3">
           <label htmlFor="email">Email</label>
           <input
@@ -117,7 +120,7 @@ const LoginForm = () => {
             <span className="text-danger">{state.errors.password[0]}</span>
           )}
         </div>
-        <div className="d-flex justify-content-end ">
+        <div className="d-flex justify-content-end">
           <button
             type="submit"
             className="btn btn-primary"

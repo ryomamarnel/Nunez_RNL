@@ -11,12 +11,16 @@ const Navbar = () => {
 
   const menuItems = [
     {
-      route: "/",
+      route: "/genders",
       title: "Genders",
     },
     {
       route: "/users",
       title: "Users",
+    },
+    {
+      route: "/feedback",
+      title: "Feedback",
     },
   ];
 

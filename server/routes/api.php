@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\GenderController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\FeedbackController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('/destroyUser/{user}', 'destroyUser');
     });
 });
+
+Route::post('/feedback', [FeedbackController::class, 'store']);
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();

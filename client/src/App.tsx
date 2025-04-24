@@ -5,6 +5,7 @@ import DeleteGender from "./pages/gender/DeleteGender";
 import User from "./pages/user/Users";
 import Login from "./pages/login/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Feedback from "./components/forms/automate/feedbacks";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <User />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/feedback",
+    element: (
+      <ProtectedRoute>
+        <Feedback />
       </ProtectedRoute>
     ),
   },
